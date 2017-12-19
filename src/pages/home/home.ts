@@ -20,7 +20,7 @@ export class HomePage {
 		this.http.get(this.url+'/beers')
 			.map( response => response.json() )
 			.subscribe( response => {
-				console.log( response ) }
+				this.beers = response }
 			)
   }
 
