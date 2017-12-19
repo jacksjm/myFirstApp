@@ -3,16 +3,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Cervejas</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 	<ion-list>
-		<button ion-item *ngFor="let beer of beers">
+		<button ion-item *ngFor="let beer of beers" (click)="getBeerInfo(beer.id)">
 			{{ beer.name }}
 		</button>
 	</ion-list>
-  <button ion-button primary (click)="openTestPage()">Abrir Teste</button>
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>
