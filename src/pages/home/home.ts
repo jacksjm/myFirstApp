@@ -24,7 +24,7 @@ export class HomePage {
 			)
   }
 
-  openTestPage(){
-	this.navCtrl.push(TestPage)
+  getBeerInfo(id: number){
+	this.navCtrl.push(TestPage,{'beer_id': id,'api_url': this.url})
   }
 }
